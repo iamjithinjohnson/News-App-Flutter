@@ -20,18 +20,27 @@ class Splash extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  check
-                      ? Image.asset(
-                          'assets/images/kudu.png',
-                          scale: 3,
-                        )
-                      : Image.asset(
-                          'assets/images/ku.png',
-                          scale: 3,
-                        ),
-                  SizedBox(height: 20),
+                  //check
+                  // ? Image.asset(
+                  //     'assets/images/kudu.png',
+                  //     scale: 3,
+                  //   )
+                  // : Image.asset(
+                  //     'assets/images/ku.png',
+                  //     scale: 3,
+                  //   ),
+
                   Text(
-                    'KuDu News',
+                    'KUDU',
+                    style: TextStyle(
+                      fontSize: 65,
+                      color: check ? Colors.white : Color(0xff8e0438),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  //SizedBox(height: 5),
+                  Text(
+                    'news',
                     style: TextStyle(
                       fontSize: 35,
                       color: check ? Colors.white : Color(0xff8e0438),

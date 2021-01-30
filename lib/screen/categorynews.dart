@@ -30,6 +30,10 @@ class _CategoryNewsState extends State<CategoryNews> {
     _loading.value = false;
   }
 
+  Future<void> refreshList() async {
+    getNews();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +68,7 @@ class _CategoryNewsState extends State<CategoryNews> {
               future: getNews(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 return snapshot.hasError
-                    ? noInternet(context)
+                    ? noInternet(context: context, refresh: refreshList)
                     : Obx(() => _loading.value
                         ? Center(
                             heightFactor: 8, child: CircularProgressIndicator())

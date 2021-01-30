@@ -13,10 +13,14 @@ import 'package:get/get.dart';
 // ignore: must_be_immutable
 class Home extends StatelessWidget {
   var axis = false.obs;
+
   var _loading = true.obs;
-  var _currentind = 0.obs; //not used
+
+  var _currentind = 0.obs;
   List<ArticleModel> newslist = [];
+
   List<CategoryModel> catmodel = category();
+
   var _index = 0;
 
   getNews() async {
@@ -90,7 +94,7 @@ class Home extends StatelessWidget {
                     future: getNews(),
                     builder: (BuildContext context, AsyncSnapshot snapshot) {
                       return snapshot.hasError
-                          ? noInternet(context)
+                          ? noInternet(context: context, refresh: refreshList)
                           : Obx(() => _loading.value
                               ? Center(
                                   heightFactor: 8,

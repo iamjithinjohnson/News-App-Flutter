@@ -49,7 +49,6 @@ class WebVieww extends StatelessWidget {
                         height: MediaQuery.of(context).size.height * 0.55,
                         imageUrl: image,
                         width: MediaQuery.of(context).size.width,
-                        filterQuality: FilterQuality.none,
                         fit: BoxFit.cover,
                       ),
                       Padding(
