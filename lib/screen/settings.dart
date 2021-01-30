@@ -122,7 +122,7 @@ class Settings extends StatelessWidget {
             Spacer(),
             Text('© Developed 2021'),
             SizedBox(height: 10),
-            Text('Ver 1.1.7'),
+            Text('Ver 1.1.8'),
             SizedBox(height: 10)
           ],
         ),
