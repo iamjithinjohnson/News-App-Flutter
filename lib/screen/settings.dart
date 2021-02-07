@@ -89,7 +89,7 @@ class Settings extends StatelessWidget {
                 InkWell(
                     onTap: () async {
                       const url =
-                          "https://www.blogger.com/blog/page/edit/5032494903045203699/8348948307391617514";
+                          "https://github.com/iamjithinjohnson/News-App-Flutter/blob/master/Privacy%20Policy.md";
                       if (await canLaunch(url))
                         await launch(url);
                       else
@@ -108,7 +108,7 @@ class Settings extends StatelessWidget {
                 InkWell(
                     onTap: () async {
                       const url =
-                          "https://www.app-privacy-policy.com/live.php?token=nzIKSTlBEAFtvMxCnqpXmVH49ikh37Qn";
+                          "https://github.com/iamjithinjohnson/News-App-Flutter/blob/master/Terms%20%26%20Conditions.md";
                       if (await canLaunch(url))
                         await launch(url);
                       else
@@ -122,7 +122,7 @@ class Settings extends StatelessWidget {
             Spacer(),
             Text('© Developed 2021'),
             SizedBox(height: 10),
-            Text('Ver 1.1.8'),
+            Text('Ver 1.1.9'),
             SizedBox(height: 10)
           ],
         ),

@@ -63,7 +63,7 @@ class ShowHorizontal extends StatelessWidget {
                         fit: BoxFit.cover),
                   ),
                   Padding(
-                      padding: const EdgeInsets.all(15),
+                      padding: const EdgeInsets.all(20),
                       child: Text(title,
                           style: TextStyle(
                               color: white,
@@ -72,7 +72,7 @@ class ShowHorizontal extends StatelessWidget {
                   Positioned(
                     top: 10,
                     child: Padding(
-                      padding: const EdgeInsets.all(15),
+                      padding: const EdgeInsets.all(20),
                       child: Text(source,
                           style: TextStyle(
                               fontSize: 18,
