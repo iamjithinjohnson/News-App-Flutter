@@ -89,7 +89,7 @@ class _CategoryNewsState extends State<CategoryNews> {
                                             desc: newslist[index].description,
                                             imgurl: newslist[index].urlToImage,
                                             url: newslist[index].articleUrl,
-                                            source: newslist[index].author,
+                                            source: newslist[index].source,
                                           ),
                                           SizedBox(height: 10),
                                           Row(
@@ -104,7 +104,7 @@ class _CategoryNewsState extends State<CategoryNews> {
                                                 url: newslist[index + 1]
                                                     .articleUrl,
                                                 source:
-                                                    newslist[index + 1].author,
+                                                    newslist[index + 1].source,
                                               ),
                                               SizedBox(width: 10),
                                               Expanded(
@@ -122,7 +122,7 @@ class _CategoryNewsState extends State<CategoryNews> {
                                                           .articleUrl,
                                                       source:
                                                           newslist[index + 2]
-                                                              .author,
+                                                              .source,
                                                     ),
                                                     SizedBox(height: 10),
                                                     ShowRightVerticalBottom(
@@ -137,7 +137,7 @@ class _CategoryNewsState extends State<CategoryNews> {
                                                           .articleUrl,
                                                       source:
                                                           newslist[index + 3]
-                                                              .author,
+                                                              .source,
                                                     ),
                                                   ],
                                                 ),
@@ -158,7 +158,7 @@ class _CategoryNewsState extends State<CategoryNews> {
                                       desc: newslist[index + 4].description,
                                       imgurl: newslist[index + 4].urlToImage,
                                       url: newslist[index + 4].articleUrl,
-                                      source: newslist[index + 4].author,
+                                      source: newslist[index + 4].source,
                                     );
                                   },
                                 ),

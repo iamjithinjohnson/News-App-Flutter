@@ -47,40 +47,46 @@ class ShowHorizontal extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                ),
-                child: CachedNetworkImage(
-                    imageUrl: imgurl,
-                    height: heightsize * 0.6,
-                    width: MediaQuery.of(context).size.width,
-                    filterQuality: FilterQuality.none,
-                    fit: BoxFit.cover),
+              Stack(
+                alignment: Alignment.bottomLeft,
+                children: [
+                  Container(
+                    clipBehavior: Clip.antiAlias,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(35),
+                    ),
+                    child: CachedNetworkImage(
+                        imageUrl: imgurl,
+                        height: heightsize * 0.68,
+                        width: MediaQuery.of(context).size.width,
+                        filterQuality: FilterQuality.none,
+                        fit: BoxFit.cover),
+                  ),
+                  Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Text(title,
+                          style: TextStyle(
+                              color: white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20))),
+                  Positioned(
+                    top: 10,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Text(source,
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                    ),
+                  )
+                ],
               ),
-              Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
-                  child: TitleText(titletext: title)),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 13),
-                  child: heightsize > 580
-                      ? DescriptionTextWidget(text: desc)
-                      : DescText(desctext: desc)),
               // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 18),
-              //   child: Row(
-              //     children: [
-              //       Text('$source - ', style: TextStyle(color: main)),
-              //       Text('time', style: TextStyle(color: main)),
-              //       Spacer(),
-              //       GestureDetector(
-              //           child: Icon(Icons.share, color: main, size: 15),
-              //           onTap: null),
-              //     ],
-              //   ),
-              // )
+              //     padding: const EdgeInsets.symmetric(horizontal: 13),
+              //     child: heightsize > 480
+              //         ? DescriptionTextWidget(text: desc)
+              //         : DescText(desctext: desc)),
             ],
           ),
         ),

@@ -67,7 +67,10 @@ class ShowVertical extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    Text(source.toString()),
+                    Text(
+                      source.toString(),
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     Spacer(),
                     GestureDetector(
                         child: Icon(Icons.share, size: 15),

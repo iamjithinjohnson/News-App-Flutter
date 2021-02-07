@@ -23,6 +23,7 @@ class News {
             publshedAt: DateTime.parse(element['publishedAt']),
             content: element["content"],
             articleUrl: element["url"],
+            source: element["source"]['name'],
           );
           news.add(article);
         }
@@ -55,6 +56,7 @@ class CategoryNewss {
             publshedAt: DateTime.parse(element['publishedAt']),
             content: element["content"],
             articleUrl: element["url"],
+            source: element["source"]['name'],
           );
           news.add(article);
         }

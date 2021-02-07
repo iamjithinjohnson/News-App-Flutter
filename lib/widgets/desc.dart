@@ -23,7 +23,9 @@ class DescriptionTextWidget extends StatelessWidget {
       secondHalf = "";
     }
     return secondHalf.isEmpty
-        ? Text(firstHalf)
+        ? Text(firstHalf,
+            style: TextStyle(
+                color: colorDesc, fontSize: 14, fontWeight: FontWeight.w400))
         : Column(
             children: <Widget>[
               Obx(

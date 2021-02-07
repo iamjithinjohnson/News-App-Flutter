@@ -76,7 +76,7 @@ class Home extends StatelessWidget {
                 ),
               ),
               Container(
-                  height: MediaQuery.of(context).size.width * 0.22,
+                  height: MediaQuery.of(context).size.width * 0.23,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       physics: BouncingScrollPhysics(),
@@ -111,7 +111,7 @@ class Home extends StatelessWidget {
                                             desc: newslist[index].description,
                                             imgurl: newslist[index].urlToImage,
                                             url: newslist[index].articleUrl,
-                                            source: newslist[index].author,
+                                            source: newslist[index].source,
                                           )
                                         : BuildCarousel(
                                             index: index,
@@ -127,38 +127,6 @@ class Home extends StatelessWidget {
             ],
           ),
         ));
-  }
-
-  Widget _buildCarousel(BuildContext context, int index) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.80,
-      child: PageView.builder(
-        itemCount: newslist.length,
-        onPageChanged: (var index) {
-          // setState(() {
-          //   _index = index;
-          // });
-          // print('index.obs = ${index.obs}');
-        },
-        physics: BouncingScrollPhysics(),
-        // store this controller in a State to save the carousel scroll position
-        controller: PageController(viewportFraction: 0.85),
-        itemBuilder: (BuildContext context, int itemIndex) {
-          // print('itemIndex.obs = ${itemIndex.obs}');
-
-          return Transform.scale(
-            scale: itemIndex == _index ? 1 : 0.9,
-            child: ShowHorizontal(
-              title: newslist[itemIndex].title,
-              desc: newslist[itemIndex].description,
-              imgurl: newslist[itemIndex].urlToImage,
-              url: newslist[itemIndex].articleUrl,
-              source: newslist[itemIndex].author,
-            ),
-          );
-        },
-      ),
-    );
   }
 }
 
@@ -176,7 +144,7 @@ class _BuildCarouselState extends State<BuildCarousel> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.80,
+      height: MediaQuery.of(context).size.height * 0.7,
       child: PageView.builder(
         itemCount: widget.newslist.length,
         onPageChanged: (var index) {
@@ -198,7 +166,7 @@ class _BuildCarouselState extends State<BuildCarousel> {
               desc: widget.newslist[itemIndex].description,
               imgurl: widget.newslist[itemIndex].urlToImage,
               url: widget.newslist[itemIndex].articleUrl,
-              source: widget.newslist[itemIndex].author,
+              source: widget.newslist[itemIndex].source,
             ),
           );
         },
