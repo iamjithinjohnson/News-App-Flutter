@@ -3,6 +3,7 @@ import 'package:newsapp/helper/category.dart';
 import 'package:newsapp/models/category_model.dart';
 import 'package:newsapp/screen/categorynews.dart';
 import 'package:get/get.dart';
+import 'package:newsapp/screen/privacy.dart';
 import 'package:newsapp/themeservice.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -88,13 +89,12 @@ class Settings extends StatelessWidget {
                 SizedBox(width: 5),
                 InkWell(
                     onTap: () async {
-                      const url =
-                          "https://github.com/iamjithinjohnson/News-App-Flutter/blob/master/Privacy%20Policy.md";
-                      if (await canLaunch(url))
-                        await launch(url);
-                      else
-                        // can't launch url, there is some error
-                        throw "Could not launch $url";
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => PrivacyPolicy(
+                                    check: true,
+                                  )));
                     },
                     child: Text('Privacy Policy')),
                 Spacer(),
@@ -107,13 +107,12 @@ class Settings extends StatelessWidget {
                 SizedBox(width: 5),
                 InkWell(
                     onTap: () async {
-                      const url =
-                          "https://github.com/iamjithinjohnson/News-App-Flutter/blob/master/Terms%20%26%20Conditions.md";
-                      if (await canLaunch(url))
-                        await launch(url);
-                      else
-                        // can't launch url, there is some error
-                        throw "Could not launch $url";
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => PrivacyPolicy(
+                                    check: false,
+                                  )));
                     },
                     child: Text('Terms and Condition')),
                 Spacer(),
@@ -122,7 +121,7 @@ class Settings extends StatelessWidget {
             Spacer(),
             Text('© Developed 2021'),
             SizedBox(height: 10),
-            Text('Ver 1.1.9'),
+            Text('Ver 1.2.0'),
             SizedBox(height: 10)
           ],
         ),

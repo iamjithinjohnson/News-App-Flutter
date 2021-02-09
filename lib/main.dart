@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //FlutterStatusbarcolor.setStatusBarColor(Colors.white);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
 
     return GetMaterialApp(
       title: 'Flutter Demo',
