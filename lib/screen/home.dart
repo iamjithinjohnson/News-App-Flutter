@@ -69,9 +69,8 @@ class Home extends StatelessWidget {
                         onTap: () {
                           axis.value = !axis.value;
                         },
-                        child: Obx(() => axis.value
-                            ? Icon(Icons.panorama_vertical)
-                            : Icon(Icons.panorama_horizontal)))
+                        child: Obx(() => IconAnimation(check: axis.value))),
+                    // : Icon(Icons.panorama_horizontal)))
                   ],
                 ),
               ),
@@ -172,5 +171,44 @@ class _BuildCarouselState extends State<BuildCarousel> {
         },
       ),
     );
+  }
+}
+
+class IconAnimation extends StatefulWidget {
+  const IconAnimation({Key key, @required this.check}) : super(key: key);
+
+  final bool check;
+
+  @override
+  _IconAnimationState createState() => _IconAnimationState();
+}
+
+class _IconAnimationState extends State<IconAnimation>
+    with TickerProviderStateMixin {
+  AnimationController animationController;
+  void initState() {
+    super.initState();
+    animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 1000),
+    );
+
+    animationController.forward();
+    animationController.repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    widget.check
+        ? animationController.forward()
+        : animationController.reverse();
+    return AnimatedIcon(
+        icon: AnimatedIcons.list_view, progress: animationController);
   }
 }
