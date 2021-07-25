@@ -44,7 +44,7 @@ jobs:
       # want to change this to 'flutter test'.
 
       - name: Run tests
-        run: flutter run
+        run: flutter run lib/main.dart
 
       - name: build apk
         run: flutter build apk --split-per-abi
