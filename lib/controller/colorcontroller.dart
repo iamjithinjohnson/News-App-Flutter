@@ -31,11 +31,11 @@ class ColorController extends GetxController {
     isLightTheme = press;
     if (isLightTheme) {
       backgroundcolor = Colors.white;
-      Color d = Color(0xFf34323d);
-      Color dd = Color(0xFF222029);
-      Color ddd = Color(0xFFe7e7e8);
-      Color dddd = Color(0xFFd8d7da);
-      Color ddddd = Color(0x66000000);
+      // Color d = Color(0xFf34323d);
+      // Color dd = Color(0xFF222029);
+      // Color ddd = Color(0xFFe7e7e8);
+      // Color dddd = Color(0xFFd8d7da);
+      // Color ddddd = Color(0x66000000);
     } else {
       backgroundcolor = Color(0x66000000);
     }

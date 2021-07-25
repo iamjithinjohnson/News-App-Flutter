@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/themeservice.dart';
-import 'package:get/get.dart';
 
 Widget noInternet({BuildContext context, Future<void> Function() refresh}) {
   bool check = ThemeService().loadThemeFromBox();

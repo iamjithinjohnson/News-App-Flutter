@@ -16,12 +16,12 @@ class Home extends StatelessWidget {
 
   var _loading = true.obs;
 
-  var _currentind = 0.obs;
+  //var _currentind = 0.obs;
   List<ArticleModel> newslist = [];
 
   List<CategoryModel> catmodel = category();
 
-  var _index = 0;
+  //var _index = 0;
 
   getNews() async {
     News news = News();

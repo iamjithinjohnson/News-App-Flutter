@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:newsapp/screen/webview.dart';
 import 'package:newsapp/theme.dart';
 
-import 'desc.dart';
-
 class ShowHorizontal extends StatelessWidget {
   final String title;
   final String desc;
@@ -22,7 +20,7 @@ class ShowHorizontal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double widthSize = MediaQuery.of(context).size.width;
+    // double widthSize = MediaQuery.of(context).size.width;
     double heightsize = MediaQuery.of(context).size.height;
 
     return Padding(

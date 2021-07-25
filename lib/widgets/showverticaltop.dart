@@ -5,8 +5,6 @@ import 'package:newsapp/screen/webview.dart';
 import 'package:newsapp/theme.dart';
 import 'package:get/get.dart';
 
-import 'desc.dart';
-
 class ShowVerticalTop extends StatelessWidget {
   final String title;
   final String desc;

@@ -5,7 +5,6 @@ import 'package:newsapp/screen/categorynews.dart';
 import 'package:get/get.dart';
 import 'package:newsapp/screen/privacy.dart';
 import 'package:newsapp/themeservice.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
 class Settings extends StatelessWidget {
