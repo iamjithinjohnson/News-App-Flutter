@@ -42,8 +42,12 @@ jobs:
       # Your project will need to have tests in test/ and a dependency on
       # package:test for this step to succeed. Note that Flutter projects will
       # want to change this to 'flutter test'.
+<<<<<<< HEAD
       - name: Run tests
         run: flutter run
+=======
+
+>>>>>>> a1678ada4a5e3e4ebbb43af8c381ff94e5df03a5
       - name: build apk
         run: flutter build apk --split-per-abi
       
