@@ -43,8 +43,8 @@ jobs:
       # package:test for this step to succeed. Note that Flutter projects will
       # want to change this to 'flutter test'.
 
-      - name: Run tests
-        run: flutter run lib/main.dart
+#       - name: Run tests
+#         run: flutter run lib/main.dart
 
       - name: build apk
         run: flutter build apk --split-per-abi
